@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="../css/style.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Damion&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/9ff57220c8.js" crossorigin="anonymous"></script>
+<title>Process Page</title>
+</head>
+
+<body>
+	<header>
+		<section class="header-section">
+			<ul>
+				<li><a href="https://www.sheridancollege.ca/" target="_blank">Sheridan Home</a></li>
+				<li><a href="https://www.sheridancollege.ca/student-life" target="_blank">Sheridan Student Life</a></li>
+				<li><a>Contacts</a></li>
+			</ul>
+			
+			<ul class="utility-nav">
+				<li><a href="process.html"><i class="fa-solid fa-basket-shopping"></i>Shopping Basket</a></li>
+				<li><a href="process.html"><i class="fa-solid fa-user"></i>Log In</a></li>
+				<li><a href="process.html"><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
+			</ul>
+		</section>
+	</header>
+	<nav>
+		<section class="global-nav">
+			<h1>Sofia's <i class="fa-solid fa-mug-saucer"></i> Tea </h1>
+			<ul>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="process.html">Pastries</a></li>
+				<li><a href="process.html">Cakes</a></li>
+				<li><a href="process.html">Process</a></li>
+			</ul>
+		</section>
+	</nav>
+	
+	
+	<main class="process-content">
+		<h2>Ideation and Planning</h2>
+		<p>The idea behind this website was simple, one of my friends dreams was to open up a bakery with her sister. This gave me the idea of basing the website off of this business idea. Of course the business does not actually exist which is why the photographies were hard to obtain so I had to rely on a few images from the web which are free for public use. I chose the Sheridan website as an inspiration because I was very fascinated by its simple but elegant design. Its home page did not feature any unnecessary content making it easy to feature all of its structure without cutting out any sections. 
+		<br>
+		I began this project by deciding a color palette. I used an online palette maker to help me choose but also looked at other bakery sites to draw some inspiration. One of the sites I was most drawn by is the company Cobbs Bread. Their primary color is a wine red and they dont really use any other color, instead they use different shades of their primary color making it a very aesthetic site. I finally landed on using purple as the main color of this project and defined it as a function in the root of the CSS. 
+		<br>
+		I then decided what content I wanted to feature to replace the numerous links the Sheridan site offers. In most bakery sites I lookd at, they have no more than 5 links (including the home page link) in their global navigation bar and they did not feature any utility navigation bars. This made it harder for me to come up with enough links to match Sheridans page. However, I used some of the links some bakery sites had on the footer and palced them in the same palce as the Sheridan site in the header section.
+		</p>
+		
+		<h2>Developing the Navigation Bar</h2>
+		<p>The Sheridan site features a very simple design, they have a utility bar at the top of the page with a grey background and two sets of links: One of the sets of links features horizontal border lines while the others dont. I replicated this effect using display: flex and spacing out the two sets of links with justify-content: space-between then adding the borders to the links on the right side of the screen. The following taks I had to accomplish was the global nav. section. To design this part of the website I first needed the logo for the bakery which I created simply by using an h1 tag and using an icon to compliment the logo. Next to it, I used an unordered list and distributed the elements evenly by using a display: grid property and setting each column in the grid to even width.</p>
+		<br>
+		<p>The last thing I had to replicate was the hover effect in the sheridan site. When you hover on one of the elements in the global nav, the block arund the element gets a shadow making it stand out over the other elements. In addition, the element gets a blue border on the top of aroudn 4 pixels. To replicate this element I used an inset shadow effect rather than a border because the border would alternate the padding of the elements, while adding a shadow with no blur perfeclty mimicked the original site.</p>
+		
+		<div class="website-nav-bars">
+			<img src="../images/sheridan-nav-bar.png" alt="Sheridan Nav">
+			<img src="../images/sofias-tea-nav-bar.png" alt="Sofias Tea Nav">
+		</div>
+		
+		<h2>Home Page</h2>
+		<p>The home page starts with a carousel of images and featured content at the very top of the page. unfortunately I could not manage to make my carousel functional with javascript. Instead I simply added the image and feature content as well as the arrows to mimic those of a working carousel of pictures. The content in the carousel is displayed in a white box just like in the Sheridan page and has a header of the primary color of the site and a button. I layed out this block of content and positioned it as accurately as possible with position: relative and the top &amp; left stylings; the arrows were displayed with an absolute position.</p>
+		
+		<div class="webiste-home-images">
+		<img src="../images/home-page-ss.jpg"> <img src="../images/sheridan-home-top.png">
+		</div>
+		<p>Under the carousel is a block of content with a search bar which slightly overlaps the images in the carousel. The block in the original Sheridan page has two separate icons. I replicated the overlapping effect using a transform: translate propety and implemented the search box with some featured content under it. Where I decided to drift awat from the design is in the right end of the block. Instead of using two sections with headings and sub-headings, I figured this could be used for a social media section. It is important for all businesses to have easily accessible social media and having other content in this area would have hindered the importance of the social media pages that are referred. Ultimately, this changed the layout but kept a similar aesthetic while allowing me to implement a key section of the site. </p>
+		
+		<div class="webiste-home-images">
+		<img src="../images/sofias-tea-home-info.png"> <img src="../images/sheridan-home-info.png">
+		</div>
+		
+		<p>Following this section of the page, I designed a segment that featured a paragraph with information on the right side and a content grid on the left with borders forming a cross in between the text. The paragraph section of the page was fairly easy to develop, however the grid was a little tricky. To do the list I made a section with 4 divisions each with an h2 and h3 tag. I once again used the display grid and a property of grid-template-column: 50% 50%; This made 4 columns of eaqual width and to make them a square I finally added an aspect-ratio: 1; making each division a perfect square. Finally, to add the border lines that separate each set of information I used a nth child property which allowed me to select specific squares, giving the odd number childs (1 &amp; 3) on the left a border right. This added the vertical line and the horizontal line was displayed by selecting the bottom children (3 &amp; 4) and giving them a border-top. The result looked accurate and it was a perfect feature to highlight some interesting facts about the bakery. </p>
+		<br>
+		<p>The next section was a carousel that featured a large segment of text and a denotative image. For this I actually bootstrapped the a carousel from w3schools from this link <a href="https://www.w3schools.com/bootstrap/bootstrap_carousel.asp" target="_blank">https://www.w3schools.com/bootstrap/bootstrap_carousel.asp</a>This gave me the JavaScript I needed to make the carousel functional and I simply had to add some additional styling by locating the elements with the inspect tool and styling my elements there and later pasting the adjustments made to my code. There are certain features however that I had to style directly in my html to overwrite the bootstrap. For example, adding the padding to the carousel to copy the one in the Sheridan page or add a shadow to the element. There were a few things that I failed to copy from the carousel in the original page like the location of the arrows, which are originally on the outside of the carousel. However, I tried my best to replicate the effect by making the arrows grey with a semi-transparent white backgroud.</p>
+		
+		<br>
+		
+		<p>After the second carousel was an events/calendar section in the Sheridan site. I replicated this section using flexbox and grid. The right side was a challenge to get right since there was borders on the bottom of the elements. However using grid I was able to evenly space out all the elements and add the border to the bottom of each parent.</p>
+		
+		<div class="webiste-home-images">
+		<img src="../images/sofias-tea-home-carousel.png"><img src="../images/sheridan-home-carousel.png">
+		</div>
+		
+		<p>Finally, the Sheridan page had a version of a carousel at the bottom of the page above the footer where they displayed images and facts about their campus. The design was easy to replicate but making it functional was quite challenging. I used querySelectors in JavaScript to define each element and later added eventListeners to make the zindex of the overlapping images change when the location buttons were changed. I was not able to make the arrow effect happen on command. I was able to design it as a static element using the ::before property and making a shape. Finally the top border appearing on hover was done the same way as the navgation, using an inset shadow on the top of the element.</p>
+		
+		<div class="webiste-home-images">
+		<img src="../images/sofias-tea-home-bottom.png"><img src="../images/sheridan-home-bottom.png">
+		</div>
+		
+		<h2>About Us Page</h2>
+		<p>The about us page in Sofias Tea was based on the Student Life page in Sheridan College. This was, like the home page, a very simple but effective design. It gave opportunity to feature a lot of content but did not overwhelm me as a viewer. It also used many images so it gave me a chance to use some of the media I produced myself.</p>
+		<br>
+		<p>The first section was simply an connotative image of the screens width which was very easy to place. Then, there was a writing section of around 70% of the page where the entirety of the content fit. This area also overlapped the connoctative image which again was done using a transform: trasnlate(); property. </p>
+		<br>
+		<p>The next element I focused on was the arrangement of the page. The top was easy to replicate as it was a heading followed by a brief paragraph. Under this section was a 3 column design, each column featuring an image, a heading with an arrow and a paragraph elaborating information suggested by the heading. I used a display grid to develop the three columns and then spaced out the content in eahc column using flexbox.</p>
+		
+		<br>
+		
+		<p>Finally, I had to make the rest of the about us page which was actually simple since the content all followed a 2 column structure. Each column occipuied around half of the section minus the gap in between. They all have an image header and paragraph except for one of the sections. Nonetheless, this didnt change much as I ended up using the same strategy as before of organizing the divisions using a grid and later the content of the divisions using a display: flex;</p>
+		
+		<h2>Footer</h2>
+		<p>One of the things I immediately noticed as I was seeing Sheridan's footer was that it was also filled with numerous links most of which I didnt require for this project. Before getting to ideating how I would adapt the structure to my site I looked again at the footers of other bakeries and found again that the majority of them did not feature many links outside of social media and the links used in the navigation bar. The Sheridan footer was divided in 3 rows, a row featuring numerous links to additional content, a section with the addresses and contact information of the different campuses, and a third section with the logo and some social media links. I decided that I could remove one of the rows and fit all the content I needed in two sections. I used a ul to create the columsn of content in the rows and fit the links in li tags. I used flexbox to space out the columns and the last thing I needed to add was the border at the bottom of the section to mark the division of the content.</p>
+		
+		<p>For the bottom half I simply used an h1 tag to create the logo once again and another unordered list to make the media tags. Finally, I used a display: flex; and justify-content: space-between; to space out the elements. The last detail I had to take care of was the media styling. The Sheridan page featured their social media pages in blue cricles with white logos, so I did the same with a brighter purple to follow the color scheme of the rest of the site.</p>
+		
+		<div class="webiste-home-images">
+		<img src="../images/sofias-tea-footer.png"><img src="../images/sheridan-footer.png">
+		</div>
+		
+		<h2>Obstacles and Improvements</h2>
+		<p>The development of the site was, for the most part, very smooth sailing. However, something I was troublesome and I was not able to fix was the bootstrap changing some of the styling elements of the site. When I implemented the bootstrap for the carousel it adjusted the padding and font size of the headings and text areas of the page. This slighltly altered the design as (the changes can be seen in the navigation bar when you change from the home page to the about us or process page). It was hard to overwrite the changes, some of the fixes I had to add individually in each segment of the page. For example, the bootstrap file altered the weight of the heading font. If I were to re-do this project I would like to find a way to cancel these changes</p>
+		<br>
+		<p>Another difficulty I faced was finding images and taking new media production. This is beacause it is not a real business so I couldn't take pictures of the employees for example, or the products. I had to undertake the task of baking myself for some of the images or used pictures of some of the events I have attended. For some images however, like the ones of employees, I had to aquire them from the internet. They are all free licensable images so there is no copyright issues and all sources are cited below.</p>
+		
+		<h2>Sources Used</h2>
+		<p><a href="https://www.sheridancollege.ca/" target="_blank">https://www.sheridancollege.ca/</a></p>
+		<p><a href="https://www.cobsbread.com/" target="_blank">https://www.cobsbread.com/</a></p><p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fphoto%2Fcookies-crumbs-dessert-food-301972%2F&psig=AOvVaw2rwCm_CFbBmel5VIUlChcL&ust=1697381314971000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNCdvKTk9YEDFQAAAAAdAAAAABAO" target="_blank">Cookie Pile Image (Home)</a></p><p> <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.timeout.com%2Fchicago%2Frestaurants%2Fbest-bakeries-in-chicago&psig=AOvVaw3KFG7aoXF4aBLOcIAnQSE0&ust=1697387841050000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLj0n8z89YEDFQAAAAAdAAAAABAE" target="_blank">Bakery Background Image (About Us)</a></p>
+		<p><a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fflickr.com%2F62558987%40N07%2F51111216632&psig=AOvVaw2C9bxc-r0ygwYVHigrEmhn&ust=1697386819989000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCMCWzuX49YEDFQAAAAAdAAAAABAE" target="_blank">People In Bakery Image (About Us)</a></p>
+		<p><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.wixstatic.com%2Fmedia%2F8ff60d_961d34359411444ea47644132678818c~mv2.jpg%2Fv1%2Fcrop%2Fx_165%2Cy_0%2Cw_3401%2Ch_5472%2Ffill%2Fw_602%2Ch_480%2Cal_c%2Cq_80%2Cusm_0.66_1.00_0.01%2Cenc_auto%2F_MG_0619-NinaLaFlammePhotography-136.jpg&tbnid=GI90R1o0prKRTM&vet=12ahUKEwiYmvHk-PWBAxVhK2IAHUJ1AmUQMygDegQIARBt..i&imgrefurl=https%3A%2F%2Fwww.talltreebakery.com%2Fjobs&docid=UhK6q64eus_9aM&w=602&h=480&itg=1&q=bakery%20job&hl=en-GB&ved=2ahUKEwiYmvHk-PWBAxVhK2IAHUJ1AmUQMygDegQIARBt" target="_blank">Woman In Cashier Image (About Us)</a></p>
+		<p><a href="https://www.google.com/imgres?imgurl=https%3A%2F%2Ffreerangestock.com%2Fsample%2F131142%2Fpastries-on-display-for-sale.jpg&tbnid=zxcml0FDWK3xbM&vet=12ahUKEwimh6j_-fWBAxWzMVkFHYrzBYEQMygaegUIARC4AQ..i&imgrefurl=https%3A%2F%2Ffreerangestock.com%2Fphotos%2F131576%2Fpastries-on-display-for-sale.html&docid=TSnAWZnoiGyd9M&w=970&h=646&q=pastries&hl=en-GB&ved=2ahUKEwimh6j_-fWBAxWzMVkFHYrzBYEQMygaegUIARC4AQ" target="_blank">Pastries In Cabinet Image (About Us)</a></p>
+		
+	</main>
+	
+
+	<footer>
+		
+		<div class="footer-links">
+			<ul>
+				<h4>Navigation</h4>
+				<li><a href="home.html">Home</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="#">Cakes</a></li>
+				<li><a href="#">Pasteries</a></li>
+				<li><a href="process.html">Process</a></li>
+			</ul>
+
+			<ul>
+				<h4>Additional Links</h4>
+				<li><a href="https://www.sheridancollege.ca/" target="_blank">Sheridan Home</a></li>
+				<li><a href="https://www.sheridancollege.ca/student-life" target="_blank">Sheridan Student Life</a></li>
+				<li><a href="#">Get Hired</a></li>
+				<li><a href="#">Contacts</a></li>
+			</ul>
+
+			<div>
+				<h4>Find Us</h4>
+				<p>2180 Credit Valley Rd <br> Mississauga, ON L5M 3C9 <br> (647) 881 9921 <br> sofiastea@gmail.com </p>
+			</div>
+		</div>
+		
+		<div class="footer-media">
+			<h1>Sofia's <i class="fa-solid fa-mug-saucer"></i> Tea </h1>
+			<ul>
+				<li><i class="fa-brands fa-instagram"></i></li>
+				<li><i class="fa-brands fa-x-twitter"></i></li>
+				<li><i class="fa-brands fa-facebook"></i></li>
+				<li><i class="fa-brands fa-pinterest-p"></i></li>
+			</ul>
+		</div>
+		
+	</footer>
+	
+</body>
+</html>
